@@ -29,13 +29,13 @@
             </div>
             <div class="form-group">
                 <label for="catID">Category</label>
-                <input type="text" class="form-control" id="categoryID" name="categoryID">
+                <input type="text" class="form-control" id="CategoryID" name="categoryID">
             </div>
             <button type="submit" class="btn btn-primary">Add New</button>
         </form>
         <br><br>
     </div>
     <div class="col-sm-3"></div>
-
+    
 </div>
 @endsection
