@@ -24,7 +24,8 @@ Route::get('/addCategory', function () {
 Route::get('/addProduct', function () {
     return view('addProduct');
 });
-Route::post('/addCategory/store', [App\Http\Controller\CategoryController::class,'add'])->name('addCategory');
+
+Route::post('/addCategory/store', [App\Http\Controllers\CategoryController::class,'add'])->name('addCategory');
 
 Auth::routes();
 
