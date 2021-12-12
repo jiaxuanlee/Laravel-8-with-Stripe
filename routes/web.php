@@ -18,7 +18,7 @@ Route::get('/', function () {
 });
 
 Route::get('/addCategory', function () {
-    return view('addCatogory');
+    return view('addCategory');
 });
 
 Auth::routes();
