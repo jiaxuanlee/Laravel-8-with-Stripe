@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container-fluid">
-    <div class="row">
+    <div class="row"> 
         <div class="col-sm-12">
             <a class="nav-link" href="{{url('/home')}}"><img src="{{ asset('images/promotion_03.jpg')}}"  alt="" class="img-fluid" width=100%  > </a>
         </div>                    
