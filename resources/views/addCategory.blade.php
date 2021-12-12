@@ -4,11 +4,11 @@
     <div class="col-sm-3"></div>
     <div class="col-sm-6">
         <br><br>
-        <h3>Create New Catogory</h3>
+        <h3>Create New Category</h3>
         <form action="">
             <div class="form-group">
-                <label for="catogoryName">Category Name</label>
-                <input type="text" class="form-control" id="catogoryName" name="catogoryName">
+                <label for="categoryName">Category Name</label>
+                <input type="text" class="form-control" id="categoryName" name="categoryName">
             </div>
             <button type="submit" class="btn btn-primary">Add New</button>
         </form>
