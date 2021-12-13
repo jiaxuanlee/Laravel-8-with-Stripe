@@ -27,8 +27,8 @@
                         <td>{{$product->description}}</td>
                         <td>{{$product->price}}</td>
                         <td>{{$product->quantity}}</td>
-                        <td>{{$product->CategoryID}}</td>
-                        
+                        <td>{{$product->catName}}</td>
+                        <td></td>
                     </tr>
                     @endforeach
                 </tbody>
