@@ -17,7 +17,7 @@
                 <div class="col-md-9">
                     <br><br>
                     <p class="card-text">{{$product->description}}</p>
-                    <div class="card-heading">Quantity <input type="number" min="1" max="10" name="quantity">Available: {{$product->quantity}}</div><br><br>
+                    <div class="card-heading">Quantity <input type="number" min="1" max="10" name="quantity"><br> Available: {{$product->quantity}}</div><br><br>
                     <div class="card-heading">RM {{$product->price}}</div>
                     <button class="btn btn-danger btn-xs" type="submit">Add to Cart</button>
                 </div>

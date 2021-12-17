@@ -43,6 +43,8 @@ Route::get('/productDetail/{id}',[App\Http\Controllers\ProductController::class,
 
 Route::post('/addCart', [App\Http\Controllers\CartController::class,'add'])->name('add.to.cart');
 
+Route::get('/myCart', [App\Http\Controllers\CartController::class,'showMyCart'])->name('show.my.cart');
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
