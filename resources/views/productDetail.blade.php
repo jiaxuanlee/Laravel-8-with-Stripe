@@ -7,7 +7,7 @@
     <div class="col-sm-10">
         <div class="card-body">
             <div class="row">
-                <form action="route('add.to.cart')" method="POST">
+            <form action="{{ route('add.to.cart') }}" method="POST">
                     @CSRF
                 <div class="col-md-3">
                     <h5 class="card-title">{{$product->name}}</h5>
