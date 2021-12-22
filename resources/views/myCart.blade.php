@@ -108,15 +108,15 @@
                  <div class="form-row row">
                     <div class="col-xs-12">
                        <button class="btn btn-primary btn-lg btn-block" type="submit">Pay Now</button>
-                       <br>
+                       
                     </div>
-                    <br>
+                    
                  </div>
-              
+              <br><br>
            </div>
         </div>
      </div>
-
+</div>
 
 <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
 <script type="text/javascript">
@@ -168,7 +168,7 @@ if (response.error) {
 
 </script>
     </div>
-    <div class="col-sm-1"></div>
+    
     </form>
 </div>
 @endsection
