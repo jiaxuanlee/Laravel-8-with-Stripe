@@ -49,7 +49,7 @@ Route::get('/deleteCart/{id}' ,[App\Http\Controllers\CartController::class,'dele
 
 Route::post('/checkout', [App\Http\Controllers\PaymentController::class, 'paymentPost'])->name('payment.post');
 
-Route::get('/viewProducts', [App\Http\Controllers\ProductController::class,'viewProducts'])->name('viewProduct');
+Route::get('/viewProduct', [App\Http\Controllers\ProductController::class,'viewProduct'])->name('viewProduct');
 
 Auth::routes();
 

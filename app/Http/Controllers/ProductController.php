@@ -80,7 +80,7 @@ class productController extends Controller
             
     public function viewProduct(){
         $products=Product::all();
-        return view('viewProducts')->with('products',$products);
+        return view('viewProduct')->with('products',$products);
     }
     
 }
