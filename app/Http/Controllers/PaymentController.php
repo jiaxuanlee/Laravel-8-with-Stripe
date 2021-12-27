@@ -4,9 +4,18 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Stripe;
+use DB;
+use Auth;
+use Session;
+use App\Models\myCart;
+use App\Models\myOrder;
 
 class PaymentController extends Controller
 {
+    public function __construct(){
+        $this->middleware('auth');
+    }
+
     public function paymentPost(Request $request)
     {
 
@@ -24,7 +33,7 @@ class PaymentController extends Controller
             'amount'=>$request->sub,
         ]);
 
-        $orderID=DB::table('my_orders')->where('userID','=',Auth::id()->orderBy('created_at','desc')->first());  //get the order ID just now created
+        $orderID=DB::table('my_orders')->where('userID','=',Auth::id())->orderBy('created_at','desc')->first();  //get the order ID just now created
 
         $item=$request->input('cid');
         foreach($item as $item=>$value){
