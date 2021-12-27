@@ -82,5 +82,11 @@ class productController extends Controller
         $products=Product::all();
         return view('viewProduct')->with('products',$products);
     }
-    
+
+    public function searchProduct(){
+        $r=request();
+        $keyword=$r->keyword;
+        $products=DB::table('products')->where('name','like','%'.$keyword.'%')->get();
+        return view('viewProduct')->with('products',$products);
+    }
 }

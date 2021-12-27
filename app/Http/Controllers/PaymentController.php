@@ -9,6 +9,7 @@ use Auth;
 use Session;
 use App\Models\myCart;
 use App\Models\myOrder;
+use Notification;
 
 class PaymentController extends Controller
 {
@@ -42,7 +43,12 @@ class PaymentController extends Controller
             $carts->save();
         }
 
-        Session::flash('success','Orrder successfully! ');
+        $email='jiaxuan.lee.18@gmail.com'; //receiver email
+        Notification::route('mail',$email)->notify(new \App\Notifications\orderPaid($email));
+
+        Session::flash('success','Order successfully! ');
         return back();
     }
+
+    
 }
