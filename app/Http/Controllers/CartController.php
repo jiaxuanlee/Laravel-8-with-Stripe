@@ -35,9 +35,18 @@ class CartController extends Controller
         ->where('my_carts.orderID', '=', '')//if '' means haven't make payment
         ->where('my_carts.userID', '=', Auth::id()) //item match with current login user
         //->get();
+
         ->paginate(5); // 5 = five items in one page
 
-        return view('myCart')->with('carts',$carts);
+        $noItem=DB::table('my_carts')
+        ->leftjoin('products', 'products.id', '=', 'my_carts.productID')
+        ->select(DB::raw ('COUNT(*) as count_item'))
+        ->where('my_carts.orderID', '=', '')//if '' means haven't make payment
+        ->where('my_carts.userID', '=', Auth::id()) //item match with current login user
+        ->groupBy('my_carts.userID')
+        ->get();
+
+        return view('myCart')->with('carts',$carts)->with('noItem', $noItem);
     }
 
     public function delete($id){

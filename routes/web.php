@@ -60,7 +60,9 @@ Route::post('/products',[App\Http\Controllers\ProductController::class, 'searchP
 
 Route::get('/pdfReport',[App\Http\Controllers\PDFController::class,'pdfReport'])->name('pdfReport');
 
-Route::post('/phone',[App\Http\Controllers\ProductController::class, 'viewPhone'] ) ->name('phone.products');
+Route::get('/phone',[App\Http\Controllers\ProductController::class, 'viewPhone'] ) ->name('phone.products');
+
+Route::get('/computer',[App\Http\Controllers\ProductController::class, 'viewComputer'] ) ->name('computer.products');
 
 Auth::routes();
 

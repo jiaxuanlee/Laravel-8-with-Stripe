@@ -94,4 +94,11 @@ class productController extends Controller
         $products=DB::table('products')->where('CategoryID', '=', '1')->get();
         return view('viewProduct')->with('products',$products);
     }
+
+    public function viewComputer(){
+        $products=DB::table('products')->where('CategoryID', '=', '2')->orWhere('CategoryID', '=', '3')->get();
+        return view('viewProduct')->with('products',$products);
+    }
+
 }
+
