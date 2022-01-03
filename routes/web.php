@@ -58,6 +58,10 @@ Route::get('/viewProduct', [App\Http\Controllers\ProductController::class,'viewP
 
 Route::post('/products',[App\Http\Controllers\ProductController::class, 'searchProduct'] ) ->name('search.product');
 
+Route::get('/pdfReport',[App\Http\Controllers\PDFController::class,'pdfReport'])->name('pdfReport');
+
+Route::post('/phone',[App\Http\Controllers\ProductController::class, 'viewPhone'] ) ->name('phone.products');
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

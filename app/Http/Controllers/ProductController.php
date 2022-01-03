@@ -89,4 +89,9 @@ class productController extends Controller
         $products=DB::table('products')->where('name','like','%'.$keyword.'%')->get();
         return view('viewProduct')->with('products',$products);
     }
+
+    public function viewPhone(){
+        $products=DB::table('products')->where('CategoryID', '=', '1')->get();
+        return view('viewProduct')->with('products',$products);
+    }
 }
