@@ -57,9 +57,9 @@
     <button type="button" class="btn btn-success" onclick="window.location.href='{{route('show.my.cart')}}'">
       My Cart 
       <span class="badge bg-danger">
-        @foreach($noItem as $c)
-          {{ $c->count_item }}
-        @endforeach
+
+        {{ Session()->get('cartItem')}}
+        
       </span>
     </button>
     @endguest

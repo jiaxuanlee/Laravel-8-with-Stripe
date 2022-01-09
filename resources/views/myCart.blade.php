@@ -4,8 +4,8 @@
     function cal(){
         var names=document.getElementsByName('subtotal[]');
         var subtotal=0;
-        var cboxes=document.getElementsByName('cid[]');
-        var len=cboxes.length;//get number of cid[] checkbox inside the page
+        //var cboxes=document.getElementsByName('cid[]');
+        //var len=cboxes.length;//get number of cid[] checkbox inside the page , tick if click 
         for(var i=0;i<len;i++){
             if(cboxes[i].checked){ //calculate if checked
                 subtotal=parseFloat(names[i].value)+parseFloat(subtotal);
@@ -42,7 +42,7 @@
                         <td>{{$cart->price}}</td>
                         <td>{{$cart->cartQTY}}</td>
                         <td>RM {{$cart->price*$cart->cartQTY}}</td>
-                        <td><a href="{{route('delete.cart.item' ,['id'=>$cart->id])}}" class="btn btn-danger btn-xs" onClick="return confirm('Are you confirm to delete?')">Delete</a></td>
+                        <td><a href="{{route('delete.cart.item' ,['id'=>$cart->cid])}}" class="btn btn-danger btn-xs" onClick="return confirm('Are you confirm to delete?')">Delete</a></td>
                     </tr>
                     @endforeach
                     <tr>
