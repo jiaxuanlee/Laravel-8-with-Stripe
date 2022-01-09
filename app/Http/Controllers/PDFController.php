@@ -22,6 +22,7 @@ class PDFController extends Controller
         ->get();
           
         $pdf = PDF::loadView('myPDF', compact('orders'));
+        
         return $pdf->download('OrderReport.pdf');
     }
 
